@@ -13,3 +13,4 @@
 - wezterm: my terminal emulator configuration
 - nvim: configuration for my editor
 - yazi: terminal based file explorer/manager
+- aerospace: a tiling manager for better window management
