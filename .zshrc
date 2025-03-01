@@ -83,6 +83,7 @@ alias cdconfig="cd ~/.config/"
 # ---- git helpers ----
 alias gits="git status"
 alias add="git add"
+alias unadd="git restore --staged"
 alias commit="git commit -m"
 alias rebase="git rebase -i"
 alias contin="git rebase --continue"
