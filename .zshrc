@@ -44,15 +44,26 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # mkcd - (mkdir xxx && cd xxx)
 mkcd() {mkdir -p "$@" && cd "$@"}
 
+# yazi shell wrapper
+# use 'y' to open yazi
+# use 'q' to close yazi and automatically
+# cd's into whatever dir yazi was in before exiting
+# use 'Q' to close yazi without auto cd
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
 ############################################
 # ALIASES
 ############################################
 
 # ---- Window Size (for OCD) ----
 alias winsize="tput col && tput lines"
-
-# ---- Yazi ----
-alias y="yazi"
 
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
