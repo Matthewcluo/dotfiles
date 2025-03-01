@@ -51,6 +51,9 @@ mkcd() {mkdir -p "$@" && cd "$@"}
 # ---- Window Size (for OCD) ----
 alias winsize="tput col && tput lines"
 
+# ---- Yazi ----
+alias y="yazi"
+
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
 alias la="eza --icons=always -a"
