@@ -128,3 +128,5 @@ eval "$(pyenv init -)"
 
 # For zoxide
 eval "$(zoxide init zsh)"
+
+export EDITOR=nvim
