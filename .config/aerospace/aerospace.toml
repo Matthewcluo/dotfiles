@@ -114,7 +114,8 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-b = 'workspace B' # for Browser
-alt-m = 'workspace M' # for Miscellaneous
+alt-m = 'workspace M' # for Messages
+alt-s = 'workspace S' # for Spotify
 alt-t = 'workspace T' # for Terminal
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -129,6 +130,7 @@ alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-b = 'move-node-to-workspace B'
 alt-shift-m = 'move-node-to-workspace M'
+alt-shift-s = 'move-node-to-workspace S'
 alt-shift-t = 'move-node-to-workspace T'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -146,6 +148,7 @@ alt-shift-semicolon = 'mode service'
 [workspace-to-monitor-force-assignment]
 B = 'main'
 M = ['secondary', 'main']
+S = ['secondary', 'main']
 T = 'main'
 
 # 'service' binding mode declaration.
@@ -172,12 +175,12 @@ run = "move-node-to-workspace T"
 if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace B"
 
-# Automatically open iMessages windows in workspace [M]isc
+# Automatically open iMessages windows in workspace [M]essages
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
 run = "move-node-to-workspace M"
 
-# Automatically open Spotify windows in workspace [M]isc
+# Automatically open Spotify windows in workspace [S]potify
 [[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = "move-node-to-workspace M"
+if.app-id = 'com.spotify.client'
+run = "move-node-to-workspace S"
