@@ -113,10 +113,10 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-alt-b = 'workspace B' # for Browser
-alt-m = 'workspace M' # for Messages
-alt-s = 'workspace S' # for Spotify
-alt-t = 'workspace T' # for Terminal
+alt-b = 'workspace Browser' # for Browser
+alt-m = 'workspace Messages' # for Messages
+alt-s = 'workspace Spotify' # for Spotify
+alt-t = 'workspace Terminal' # for Terminal
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -128,10 +128,10 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-b = 'move-node-to-workspace B'
-alt-shift-m = 'move-node-to-workspace M'
-alt-shift-s = 'move-node-to-workspace S'
-alt-shift-t = 'move-node-to-workspace T'
+alt-shift-b = 'move-node-to-workspace Browser'
+alt-shift-m = 'move-node-to-workspace Messages'
+alt-shift-s = 'move-node-to-workspace Spotify'
+alt-shift-t = 'move-node-to-workspace Terminal'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -146,10 +146,10 @@ alt-shift-semicolon = 'mode service'
 
 # Forcing specific workspaces to specific monitors
 [workspace-to-monitor-force-assignment]
-B = 'main'
-M = ['secondary', 'main']
-S = ['secondary', 'main']
-T = 'main'
+Browser = 'main'
+Messages = ['secondary', 'main']
+Spotify = ['secondary', 'main']
+Terminal = 'main'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -168,19 +168,19 @@ alt-shift-l = ['join-with right', 'mode main']
 # Automatically open WezTerm windows in workspace [T]erminal
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = "move-node-to-workspace T"
+run = "move-node-to-workspace Terminal"
 
 # Automatically open Chrome windows in workspace [B]rowser
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-run = "move-node-to-workspace B"
+run = "move-node-to-workspace Browser"
 
 # Automatically open iMessages windows in workspace [M]essages
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
-run = "move-node-to-workspace M"
+run = "move-node-to-workspace Messages"
 
 # Automatically open Spotify windows in workspace [S]potify
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
-run = "move-node-to-workspace S"
+run = "move-node-to-workspace Spotify"
