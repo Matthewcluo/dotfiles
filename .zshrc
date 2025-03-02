@@ -62,6 +62,12 @@ function y() {
 # ALIASES
 ############################################
 
+# ---- Clear ----
+alias cls="clear"
+
+# ---- Neofetch ----
+alias nf="neofetch"
+
 # ---- Window Size (for OCD) ----
 alias winsize="tput col && tput lines"
 
