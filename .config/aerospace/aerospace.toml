@@ -146,10 +146,10 @@ alt-shift-semicolon = 'mode service'
 
 # Forcing specific workspaces to specific monitors
 [workspace-to-monitor-force-assignment]
-Browser = 'main'
+Browser = ['main', 'secondary']
 Messages = ['secondary', 'main']
 Spotify = ['secondary', 'main']
-Terminal = 'main'
+Terminal = ['main', 'secondary']
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
