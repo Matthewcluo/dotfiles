@@ -184,3 +184,25 @@ run = "move-node-to-workspace Messages"
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = "move-node-to-workspace Spotify"
+
+# Have certain apps open in floating mode by default
+# Finder
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = "layout floating"
+
+# Notes app
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = "layout floating"
+
+# Reminders app
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
+run = "layout floating"
+
+# AppCleaner
+[[on-window-detected]]
+if.app-id = 'net.freemacsoft.AppCleaner'
+run = "layout floating"
+
