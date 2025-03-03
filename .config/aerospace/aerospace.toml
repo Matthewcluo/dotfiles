@@ -178,7 +178,7 @@ run = "move-node-to-workspace Browser"
 # Automatically open iMessages windows in workspace [M]essages
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
-run = "move-node-to-workspace Messages"
+run = ["layout floating", "move-node-to-workspace Messages"]
 
 # Automatically open Spotify windows in workspace [S]potify
 [[on-window-detected]]
