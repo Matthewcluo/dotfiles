@@ -86,6 +86,9 @@ alias cdwez="cd ~/.config/wezterm/"
 alias cdnvim="cd ~/.config/nvim/"
 alias cdconfig="cd ~/.config/"
 
+# ---- LazyGit ----
+alias lg="lazygit"
+
 # ---- git helpers ----
 alias gits="git status"
 alias add="git add"
