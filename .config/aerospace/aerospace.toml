@@ -206,3 +206,8 @@ run = "layout floating"
 if.app-id = 'net.freemacsoft.AppCleaner'
 run = "layout floating"
 
+# Preview
+[[on-window-detected]]
+if.app-id = 'com.apple.Preview'
+run = "layout floating"
+
