@@ -63,7 +63,7 @@ function y() {
 ############################################
 
 # ---- Clear ----
-alias cls="clear"
+alias c="clear"
 
 # ---- Neofetch ----
 alias nf="neofetch"
