@@ -242,3 +242,8 @@ run = "layout floating"
 [[on-window-detected]]
 if.app-id = 'com.apple.AddressBook'
 run = "layout floating"
+
+# Stocks
+[[on-window-detected]]
+if.app-id = 'com.apple.stocks'
+run = "layout floating"
