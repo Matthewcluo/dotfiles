@@ -53,69 +53,65 @@ disabled = false
 style = "fg:color_white"
 
 [os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-Macos = "󰀵"
-Linux = "󰌽"
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Debian = "󰣚"
-
-[username]
-show_always = true
-format = '[ $user ]($style)'
+Windows = "󰍲 "
+Ubuntu = "󰕈 "
+Macos = "󰀵 "
+Linux = "󰌽 "
+Amazon = " "
+Android = " "
+Arch = "󰣇 "
+Debian = "󰣚 "
 
 [directory]
 style = "fg:color_aqua"
-format = "[ $path ]($style)"
+format = "[$path ]($style)"
 truncation_length = 5
 truncate_to_repo = true
 truncation_symbol = "…/"
 
 [git_branch]
-symbol = ""
-format = '[[ $symbol $branch ](fg:color_green)]($style)'
+symbol = " "
+format = '[[$symbol$branch ](fg:color_green)]($style)'
 
 [git_status]
 format = '[[(\[$all_status$ahead_behind\])](fg:color_orange)]($style)'
 
 [c]
 symbol = " "
-format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [rust]
-symbol = ""
-format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+symbol = " "
+format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [golang]
-symbol = ""
-format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+symbol = " "
+format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [ocaml]
 symbol = " "
-format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [java]
-symbol = ""
-format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+symbol = " "
+format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [python]
-symbol = ""
-format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+symbol = " "
+format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [lua]
 symbol = " "
-format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [docker_context]
-symbol = ""
-format = '[[ $symbol( $context) ](fg:#1ad1ff)]($style)'
+symbol = " "
+format = '[[$symbol($context) ](fg:#1ad1ff)]($style)'
 
 [time]
 disabled = false
 use_12hr = true
-format = '[[  $time ](fg:color_fg0)]($style)'
+format = '[[  $time](fg:color_fg0)]($style)'
 
 [line_break]
 disabled = false
