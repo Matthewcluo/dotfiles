@@ -5,6 +5,11 @@
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 
+# zsh workaround for starship's newline before prompt
+# combined with `add_newline = false` in starship
+# this precmd adds a new line every time
+# effectively serving as `add_newline = true`
+precmd() { precmd() { echo "" } }
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
