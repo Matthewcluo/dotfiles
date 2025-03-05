@@ -10,6 +10,7 @@
 # this precmd adds a new line every time
 # effectively serving as `add_newline = true`
 precmd() { precmd() { echo "" } }
+alias clear="precmd() { precmd() { echo } } && clear"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
