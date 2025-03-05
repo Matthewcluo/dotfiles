@@ -1,0 +1,121 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+$os\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$c\
+$rust\
+$golang\
+$ocaml\
+$java\
+$python\
+$lua\
+$docker_context\
+$cmd_duration\
+$time\
+$line_break$character
+"""
+
+palette = 'custom'
+
+[palettes.custom]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#00ccff'
+color_green = '#11cc00'
+color_orange = '#ff9900'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+color_white='#fefefe'
+color_turquoise='#40e0d0'
+
+# For funsies
+[character]
+success_symbol = '[❯](bold color_green)'
+error_symbol = '[❯](bold red)'
+
+# Make fill symbol blank (space)
+[fill]
+symbol = ' '
+
+[os]
+disabled = false
+style = "fg:color_white"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+Macos = "󰀵"
+Linux = "󰌽"
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Debian = "󰣚"
+
+[username]
+show_always = true
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_aqua"
+format = "[ $path ]($style)"
+truncation_length = 5
+truncate_to_repo = true
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+format = '[[ $symbol $branch ](fg:color_green)]($style)'
+
+[git_status]
+format = '[[(\[$all_status$ahead_behind\])](fg:color_orange)]($style)'
+
+[c]
+symbol = " "
+format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+
+[rust]
+symbol = ""
+format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+
+[golang]
+symbol = ""
+format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+
+[ocaml]
+symbol = " "
+format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+
+[java]
+symbol = ""
+format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+
+[python]
+symbol = ""
+format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+
+[lua]
+symbol = " "
+format = '[[ $symbol( $version) ](fg:color_turquoise)]($style)'
+
+[docker_context]
+symbol = ""
+format = '[[ $symbol( $context) ](fg:#1ad1ff)]($style)'
+
+[time]
+disabled = false
+use_12hr = true
+format = '[[  $time ](fg:color_fg0)]($style)'
+
+[line_break]
+disabled = false
