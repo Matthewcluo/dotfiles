@@ -8,6 +8,8 @@ local config = wezterm.config_builder()
 
 config.color_scheme = "tokyonight_night"
 
+config.window_background_opacity = 1.0
+
 config.font_size = 16
 
 config.max_fps = 240
