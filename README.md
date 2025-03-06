@@ -11,7 +11,7 @@
 - wezterm: my terminal emulator configuration
 - nvim: configuration for my editor
 - yazi: terminal based file explorer/manager
-- aerospace: a tiling manager for better window management
+- aerospace: a tiling and workspace manager for better window management
 
 ## Setting it all up
 
@@ -43,5 +43,6 @@
         - either also install them or remove those lines from `.zshrc`
 8. `source ~/.zshrc`
     - and then will prob have to fix whatever goes wrong
-9. I prob missed some more steps
+9. Install [Aerospace](https://nikitabobko.github.io/AeroSpace/guide)
+10. I prob missed some more steps
     - figure it out big man
