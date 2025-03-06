@@ -24,6 +24,9 @@ bindkey '^[[B' history-search-forward
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # mkcd - (mkdir xxx && cd xxx)
 function mkcd() {
     mkdir -p "$@" && cd "$@"
