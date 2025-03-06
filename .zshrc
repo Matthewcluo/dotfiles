@@ -1,9 +1,6 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
+# -------------------------
+# MY INSANELY OP ZSH CONFIG
+# -------------------------
 
 # zsh workaround for starship's newline before prompt
 # combined with `add_newline = false` in starship
@@ -11,26 +8,6 @@
 # effectively serving as `add_newline = true`
 precmd() { precmd() { echo "" } }
 alias clear="precmd() { precmd() { echo } } && clear"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/matthewluo/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/matthewluo/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/matthewluo/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/matthewluo/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -48,7 +25,9 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # mkcd - (mkdir xxx && cd xxx)
-mkcd() {mkdir -p "$@" && cd "$@"}
+function mkcd() {
+    mkdir -p "$@" && cd "$@"
+}
 
 # yazi shell wrapper
 # use 'y' to open yazi
@@ -65,7 +44,7 @@ function y() {
 }
 
 ############################################
-# ALIASES
+#   ------------ ALIASES --------------
 ############################################
 
 # ---- Clear ----
@@ -123,29 +102,22 @@ alias cd189="cd ~/Berkeley/spring_25/cs189/"
 alias cd135="cd ~/Berkeley/spring_25/ugba135/"
 
 ############################################
-# END ALIASES
+#   --------- END ALIASES -------------
 ############################################
 
 # JAVA 11 for CS 186
 export JAVA_HOME=/opt/homebrew/Cellar/openjdk@11/11.0.26/libexec/openjdk.jdk/Contents/Home
 
+# pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-[[ ! -r '/Users/matthewluo/.opam/opam-init/init.zsh' ]] || source '/Users/matthewluo/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-# END opam configuration
-
 # For zoxide
 eval "$(zoxide init zsh)"
 
-# For starship prompt
+# For starship
 eval "$(starship init zsh)"
 
+# ofc nvim btw
 export EDITOR=nvim
