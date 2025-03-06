@@ -632,6 +632,8 @@ require('lazy').setup({
         },
       }
 
+      require('java').setup()
+      require('lspconfig').jdtls.setup {}
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
       --  other tools, you can run
@@ -927,6 +929,7 @@ require('lazy').setup({
   require 'custom.plugins.alpha',
   require 'custom.plugins.oil',
   require 'custom.plugins.flash',
+  require 'custom.plugins.java',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
