@@ -633,7 +633,21 @@ require('lazy').setup({
       }
 
       require('java').setup()
-      require('lspconfig').jdtls.setup {}
+      require('lspconfig').jdtls.setup {
+        settings = {
+          java = {
+            configuration = {
+              runtimes = {
+                {
+                  name = 'JavaSE-11',
+                  path = '/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home',
+                  default = true,
+                },
+              },
+            },
+          },
+        },
+      }
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
       --  other tools, you can run
