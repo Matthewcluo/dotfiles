@@ -8,7 +8,8 @@ local config = wezterm.config_builder()
 
 config.color_scheme = "tokyonight_night"
 
-config.window_background_opacity = 1.0
+config.window_background_opacity = 0.9
+config.window_decorations = "RESIZE"
 
 config.font_size = 16
 
@@ -18,11 +19,9 @@ config.max_fps = 240
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.enable_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = true
+config.hide_tab_bar_if_only_one_tab = false
+config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
-
-config.initial_cols = 128
-config.initial_rows = 32
 
 -- Keybinds
 local act = wezterm.action
