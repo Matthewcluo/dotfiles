@@ -37,6 +37,7 @@
     - [lazygit](https://github.com/jesseduffield/lazygit?tab=readme-ov-file#homebrew)
     - [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#using-homebrew)
     - [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation#macos-homebrew)
+    - [fastfetch](https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file#macos)
     - [starship](https://starship.rs/guide/)
     - [neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#homebrew-on-macos-or-linux)
     - think about language managers like pyenv and openjdk

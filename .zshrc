@@ -56,6 +56,9 @@ alias c="clear"
 # ---- Neofetch ----
 alias nf="neofetch"
 
+# ---- Fastfetch ----
+alias ff="fastfetch"
+
 # ---- Window Size (for OCD) ----
 alias winsize="tput col && tput lines"
 
