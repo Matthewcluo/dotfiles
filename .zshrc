@@ -71,6 +71,7 @@ alias lal="eza --icons=always -al"
 # ---- Zoxide (smarter cd) ----
 alias cd="z"
 alias cdi="zi"
+alias zw="zoxide query -ls"
 
 # ---- navigating config files ----
 alias cdwez="cd ~/.config/wezterm/"
