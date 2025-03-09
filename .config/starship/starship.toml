@@ -9,7 +9,6 @@ $os\
 $directory\
 $git_branch\
 $git_status\
-$fill\
 $c\
 $rust\
 $golang\
@@ -19,7 +18,6 @@ $python\
 $lua\
 $docker_context\
 $cmd_duration\
-$time\
 $line_break$character
 """
 
@@ -38,11 +36,13 @@ color_red = '#cc241d'
 color_yellow = '#d79921'
 color_white='#fefefe'
 color_turquoise='#40e0d0'
+color_char_green='#44f53b'
+color_char_red='#ff6161'
 
 # For funsies
 [character]
-success_symbol = '[❯](bold color_green)'
-error_symbol = '[❯](bold red)'
+success_symbol = '[](color_char_green)'
+error_symbol = '[](color_char_red)'
 
 # Make fill symbol blank (space)
 [fill]
@@ -77,11 +77,11 @@ format = '[[$symbol$branch ](fg:color_green)]($style)'
 format = '[[(\[$all_status$ahead_behind\])](fg:color_orange)]($style)'
 
 [c]
-symbol = " "
+symbol = "  "
 format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [rust]
-symbol = " "
+symbol = "  "
 format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [golang]
@@ -107,6 +107,9 @@ format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 [docker_context]
 symbol = " "
 format = '[[$symbol($context) ](fg:#1ad1ff)]($style)'
+
+[cmd_duration]
+format = ' took [$duration]($style)'
 
 [time]
 disabled = false
