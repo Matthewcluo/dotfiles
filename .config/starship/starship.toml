@@ -74,7 +74,7 @@ symbol = " "
 format = '[[$symbol$branch ](fg:color_green)]($style)'
 
 [git_status]
-format = '[[(\[$all_status$ahead_behind\])](fg:color_orange)]($style)'
+format = '[[(\[$all_status$ahead_behind\] )](fg:color_orange)]($style)'
 
 [c]
 symbol = "  "
@@ -101,7 +101,7 @@ symbol = " "
 format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [lua]
-symbol = "  "
+symbol = " "
 format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [docker_context]
@@ -109,7 +109,7 @@ symbol = " "
 format = '[[$symbol($context) ](fg:#1ad1ff)]($style)'
 
 [cmd_duration]
-format = ' took [$duration]($style)'
+format = 'took [$duration]($style)'
 
 [time]
 disabled = false
