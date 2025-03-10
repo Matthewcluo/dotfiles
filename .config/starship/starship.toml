@@ -101,7 +101,7 @@ symbol = " "
 format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [lua]
-symbol = " "
+symbol = "  "
 format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
 
 [docker_context]
