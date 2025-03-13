@@ -22,6 +22,7 @@ config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = false
 config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = false
+config.tab_max_width = 32
 
 -- Keybinds
 local act = wezterm.action
