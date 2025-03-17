@@ -209,7 +209,7 @@ vim.keymap.set({ 'n', 'x', 'o' }, '<leader>fF', function()
 end, { desc = '[F]lash Treesitter mode' })
 
 -- render-markdown toggle keymap
-vim.keymap.set('n', '<leader>rm', '<CMD>RenderMarkdown buf_toggle<CR>', { desc = '[M]arkdown' })
+vim.keymap.set('n', '<leader>rm', '<CMD>RenderMarkdown toggle<CR>', { desc = '[M]arkdown' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
