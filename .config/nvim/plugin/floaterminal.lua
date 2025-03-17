@@ -57,3 +57,12 @@ end
 -- Example usage:
 -- Create a floating window with default dimensions
 vim.api.nvim_create_user_command('Floaterminal', toggle_terminal, {})
+
+-- Custom Autocommand for toggling (closing)
+-- the floating terminal when exiting terminal mode
+-- with <esc><esc> (double tap esc)
+vim.api.nvim_create_autocmd('TermLeave', {
+  callback = function()
+    vim.cmd 'Floaterminal'
+  end,
+})

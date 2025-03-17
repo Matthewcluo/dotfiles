@@ -180,10 +180,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('n', '<leader>tt', '<cmd>Floaterminal<CR>', { desc = '[T]oggle Floating [T]erminal' })
-
--- For oil.nvim: opens oil.nvim in the file's parent directory
-vim.keymap.set('n', '\\', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- TIP: Disable arrow keys in normal mode
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
@@ -200,28 +196,11 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- flash.nvim keybinds
-vim.keymap.set({ 'n', 'x', 'o' }, '<leader>ff', function()
-  require('flash').jump()
-end, { desc = '[f]lash search mode' })
-vim.keymap.set({ 'n', 'x', 'o' }, '<leader>fF', function()
-  require('flash').treesitter()
-end, { desc = '[F]lash Treesitter mode' })
-
--- render-markdown toggle keymap
-vim.keymap.set('n', '<leader>rm', '<CMD>RenderMarkdown toggle<CR>', { desc = '[M]arkdown' })
+-- For my custom keymaps
+require 'custom.keymaps.keymaps'
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
-
--- Custom Autocommand for toggling (closing)
--- the floating terminal when exiting terminal mode
--- with <esc><esc> (double tap esc)
-vim.api.nvim_create_autocmd('TermLeave', {
-  callback = function()
-    vim.cmd 'Floaterminal'
-  end,
-})
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
