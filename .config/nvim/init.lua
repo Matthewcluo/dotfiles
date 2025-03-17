@@ -208,6 +208,9 @@ vim.keymap.set({ 'n', 'x', 'o' }, '<leader>fF', function()
   require('flash').treesitter()
 end, { desc = '[F]lash Treesitter mode' })
 
+-- render-markdown toggle keymap
+vim.keymap.set('n', '<leader>rm', '<CMD>RenderMarkdown buf_toggle<CR>', { desc = '[M]arkdown' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -315,6 +318,7 @@ require('lazy').setup({
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
         { '<leader>e', group = '[E]xplore file tree' },
         { '<leader>f', group = '[F]ormating/[F]lash' },
+        { '<leader>r', group = '[R]ender' },
       }
     end,
   },
@@ -944,6 +948,7 @@ require('lazy').setup({
   require 'custom.plugins.oil',
   require 'custom.plugins.flash',
   require 'custom.plugins.java',
+  require 'custom.plugins.render-markdown',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
