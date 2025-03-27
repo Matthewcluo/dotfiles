@@ -62,6 +62,9 @@ alias ff="fastfetch"
 # ---- Window Size (for OCD) ----
 alias winsize="tput col && tput lines"
 
+# ---- WezTerm Rename Tab ----
+alias rnt="wezterm cli set-tab-title"
+
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
 alias la="eza --icons=always -a"
