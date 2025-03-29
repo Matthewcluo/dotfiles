@@ -117,6 +117,7 @@ alt-b = 'workspace Browser' # for Browser
 alt-m = 'workspace Messages' # for Messages
 alt-s = 'workspace Spotify' # for Spotify
 alt-t = 'workspace Terminal' # for Terminal
+alt-v = 'workspace Video-Call' # for Zoom/Chime/Google meets
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -132,6 +133,7 @@ alt-shift-b = 'move-node-to-workspace Browser'
 alt-shift-m = 'move-node-to-workspace Messages'
 alt-shift-s = 'move-node-to-workspace Spotify'
 alt-shift-t = 'move-node-to-workspace Terminal'
+alt-shift-v = 'move-node-to-workspace Video-Call'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -153,6 +155,7 @@ Browser = ['main', 'secondary']
 Messages = ['secondary', 'main']
 Spotify = ['secondary', 'main']
 Terminal = ['main', 'secondary']
+Video-Call = ['secondary', 'main']
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -196,6 +199,16 @@ run = ["layout floating", "move-node-to-workspace Messages"]
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = ["layout floating", "move-node-to-workspace Messages"]
+
+# Automatically open Zoom windows in workspace [V]ideo Call
+[[on-window-detected]]
+if.app-id = 'us.zoom.xos'
+run = ["layout floating", "move-node-to-workspace Video-Call"]
+
+# Automatically open Chime windows in workspace [V]ideo Call
+[[on-window-detected]]
+if.app-id = 'com.amazon.Amazon-Chime'
+run = ["layout floating", "move-node-to-workspace Video-Call"]
 
 # Automatically open Steam windows in workspace 1
 [[on-window-detected]]
