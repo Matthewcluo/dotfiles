@@ -830,6 +830,11 @@ require('lazy').setup({
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
+
+      -- Line number colors
+      vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = '#ff9e64' })
+      vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#9fff80', bold = true })
+      vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ff9e64' })
     end,
   },
 
