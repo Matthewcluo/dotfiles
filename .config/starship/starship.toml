@@ -85,19 +85,19 @@ format = '[[(\[$all_status$ahead_behind\] )](fg:color_orange)]($style)'
 
 [c]
 symbol = "  "
-format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
+format = '[[$symbol($version) ](fg:mocha_mauve)]($style)'
 
 [rust]
 symbol = "  "
-format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
+format = '[[$symbol($version) ](fg:mocha_mauve)]($style)'
 
 [golang]
 symbol = " "
-format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
+format = '[[$symbol($version) ](fg:mocha_mauve)]($style)'
 
 [ocaml]
 symbol = " "
-format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
+format = '[[$symbol($version) ](fg:mocha_mauve)]($style)'
 
 [java]
 symbol = " "
@@ -109,7 +109,7 @@ format = '[[$symbol($version) ](fg:mocha_mauve)]($style)'
 
 [lua]
 symbol = " "
-format = '[[$symbol($version) ](fg:color_turquoise)]($style)'
+format = '[[$symbol($version) ](fg:mocha_mauve)]($style)'
 
 [docker_context]
 symbol = " "
