@@ -190,22 +190,22 @@ run = ["layout floating", "move-node-to-workspace Messages"]
 if.app-id = 'com.spotify.client'
 run = "move-node-to-workspace Spotify"
 
-# Automatically open FaceTime windows in workspace [M]essages
-[[on-window-detected]]
-if.app-id = 'com.apple.FaceTime'
-run = ["layout floating", "move-node-to-workspace Messages"]
-
 # Automatically open Slack windows in workspace [M]essages
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
 run = ["layout floating", "move-node-to-workspace Messages"]
 
-# Automatically open Zoom windows in workspace [V]ideo Call
+# Automatically open FaceTime windows in workspace [V]ideo-Call
+[[on-window-detected]]
+if.app-id = 'com.apple.FaceTime'
+run = ["layout floating", "move-node-to-workspace Video-Call"]
+
+# Automatically open Zoom windows in workspace [V]ideo-Call
 [[on-window-detected]]
 if.app-id = 'us.zoom.xos'
 run = ["layout floating", "move-node-to-workspace Video-Call"]
 
-# Automatically open Chime windows in workspace [V]ideo Call
+# Automatically open Chime windows in workspace [V]ideo-Call
 [[on-window-detected]]
 if.app-id = 'com.amazon.Amazon-Chime'
 run = ["layout floating", "move-node-to-workspace Video-Call"]
@@ -229,6 +229,11 @@ run = "layout floating"
 # Reminders app
 [[on-window-detected]]
 if.app-id = 'com.apple.reminders'
+run = "layout floating"
+
+# FaceTime Screensharing
+[[on-window-detected]]
+if.app-id = 'com.apple.ScreenSharing'
 run = "layout floating"
 
 # AppCleaner
