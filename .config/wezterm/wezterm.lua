@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 
 config.color_scheme = "tokyonight_night"
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.93
 config.window_decorations = "RESIZE"
 
 config.font_size = 16
