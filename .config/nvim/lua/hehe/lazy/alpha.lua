@@ -23,6 +23,7 @@ return {
       dashboard.button('g', '  > Find Word', '<cmd>Telescope live_grep<CR>'),
       dashboard.button('e', '  > Open file explorer', '<cmd>NvimTreeToggle<CR>'),
       dashboard.button('\\', '󰉋  > Open Oil', '<cmd>Oil<CR>'),
+      dashboard.button('l', '  > Open Lazy', '<cmd>Lazy<CR>'),
       dashboard.button('t', '  > Open Floating Terminal', '<cmd>Floaterminal<CR>'),
       dashboard.button('q', '  > Quit NVIM', '<cmd>qa<CR>'),
     }
