@@ -7,7 +7,7 @@ return { -- Useful plugin to show you pending keybinds.
     -- Document existing key chains
     require('which-key').add {
       { '<leader>c', group = '[C]ode' },
-      { '<leader>d', group = '[D]ocument' },
+      { '<leader>d', group = '[D]ocument/[D]elete' },
       { '<leader>r', group = '[R]ename' },
       { '<leader>s', group = '[S]earch' },
       { '<leader>w', group = '[W]orkspace' },
@@ -16,6 +16,7 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>e', group = '[E]xplore file tree' },
       { '<leader>f', group = '[F]ormating/[F]lash' },
       { '<leader>r', group = '[R]ender' },
+      { '<leader>y', group = '[Y]ank to clipboard' },
     }
   end,
 }

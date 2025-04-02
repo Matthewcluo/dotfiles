@@ -4,6 +4,16 @@ vim.g.mapleader = " "
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Move highlighted lines up/down with J/K in Visual Mode
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- Yank into system clipboard with <leader>y
+vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]])
+
+-- Delete line into void buffer with <leader>dd
+vim.keymap.set({'n', 'v'}, '<leader>dd', '\"_dd', { desc = '[D]elete to void buffer' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
