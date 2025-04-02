@@ -16,6 +16,10 @@ return { -- Autoformat
     notify_on_error = false,
     formatters_by_ft = {
       lua = { 'stylua' },
+      python = { 'autopep8', 'autoflake' },
+      c = { 'clang-format' },
+      rust = { 'rustfmt' },
+      go = { 'gofmt', 'goimports', 'golines' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
