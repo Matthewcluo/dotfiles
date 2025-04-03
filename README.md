@@ -45,5 +45,7 @@
 8. `source ~/.zshrc`
     - and then will prob have to fix whatever goes wrong
 9. Install [Aerospace](https://nikitabobko.github.io/AeroSpace/guide)
-10. I prob missed some more steps
-    - figure it out big man
+10. Install [tmux](https://github.com/tmux/tmux/wiki/Installing)
+    - Remember to symlink correctly; tmux looks at `~/.tmux.conf`
+    - clone [tpm](https://github.com/tmux-plugins/tpm?tab=readme-ov-file#installation)
+    - see if it works lol
