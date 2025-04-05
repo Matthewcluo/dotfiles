@@ -76,6 +76,9 @@ alias cd="z"
 alias cdi="zi"
 alias zw="zoxide query -ls"
 
+# ---- tmux ----
+alias tls="tmux ls"
+
 # ---- navigating config files ----
 alias cdwez="cd ~/.config/wezterm/"
 alias cdnvim="cd ~/.config/nvim/"
